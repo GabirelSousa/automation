@@ -8,7 +8,6 @@ describe("Blog", () => {
 
     for (const item of recentPostList) {
       const text = await item.getText();
-      console.log(text);
       expect(text.length).toBeGreaterThan(10);
     }
 

@@ -3,8 +3,8 @@ import ContactPage from "../pages/contact-page";
 describe("Contact", () => {
   it("Fill the formulary and assert the success message", async () => {
 
-    ContactPage.open();
-    await (await ContactPage.name).setValue("Gabriel");
+    await ContactPage.open();
+    await ContactPage.name.setValue("Gabriel");
     await ContactPage.email.setValue("meu@email.com");
     await ContactPage.phone.setValue("888888888");
     await ContactPage.message.setValue("any message");
