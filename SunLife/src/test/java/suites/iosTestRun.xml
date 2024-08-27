@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="IOS" verbose="1">
+    <groups>
+        <run>
+            <!--            <include name="QAR"/>-->
+            <include name="QAR"/>
+            <!--            <include name="SMOKE"/>-->
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="utils.IOSListeners"/>
+    </listeners>
+    <!--QAR DATA    -->
+    <!--    <parameter name="data" value="6"/>-->
+        <parameter name="email" value="srinni-apr16@dq.com"/>
+        <parameter name="password" value="Dq!1234567"/>
+    <!--QAR DATA    -->
+    <!--    PROD DATA    -->
+<!--    <parameter name="email" value="gasous4@gmail.com"/>-->
+<!--    <parameter name="password" value="Gabe@8989"/>-->
+    <!--    PROD DATA    -->
+    <test name="QAR - Full test">
+<packages>
+    <package name="suites.ios"/>
+</packages>
+    </test>
+</suite>

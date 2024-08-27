@@ -1,0 +1,28 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="CommentedOutCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="minLines" value="13" />
+    </inspection_tool>
+    <inspection_tool class="NewClassNamingConvention" enabled="true" level="INFORMATION" enabled_by_default="true" editorAttributes="INFORMATION_ATTRIBUTES">
+      <extension name="ClassNamingConvention" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="PreviewFeature" enabled="true" level="INFORMATION" enabled_by_default="true" editorAttributes="INFORMATION_ATTRIBUTES" />
+    <inspection_tool class="ThrowablePrintStackTrace" enabled="true" level="WARNING" enabled_by_default="true">
+      <scope name="Tests" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="groupsTestNG" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="groups">
+        <value>
+          <list size="5">
+            <item index="0" class="java.lang.String" itemvalue="QAR" />
+            <item index="1" class="java.lang.String" itemvalue="Smoke" />
+            <item index="2" class="java.lang.String" itemvalue="PROD" />
+            <item index="3" class="java.lang.String" itemvalue="SMOKE" />
+            <item index="4" class="java.lang.String" itemvalue="SETUP" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

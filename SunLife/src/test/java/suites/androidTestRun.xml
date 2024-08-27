@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Android" verbose="1">
+    <groups>
+        <run>
+            <!--<include name="PROD"/>-->
+            <include name="QAR"/>
+            <!--<include name="SMOKE"/>-->
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="utils.AndroidListeners"/>
+    </listeners>
+
+        <parameter name="email" value="srinni-apr16@dq.com"/>
+        <parameter name="password" value="Dq!1234567"/>
+
+    <test name="QAR - Full test">
+        <classes>
+            <class name="suites.android.CreateAccount"/>
+        </classes>
+        <!-- OR -->
+        <packages>
+            <package name="suites.android"/>
+        </packages>
+    </test>
+</suite>
