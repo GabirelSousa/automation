@@ -42,7 +42,7 @@ public class CardID extends IOSBase {
     @Severity(SeverityLevel.NORMAL)
     public void idCardMemberName(HashMap<String, String> data) throws FileNotFoundException {
         CardIDPage idp = new CardIDPage(driver);
-        Assert.assertEquals(idp.getMember_name().getText(), STR."\{data.get("mem_first_name")} \{data.get("mem_last_name")}");
+        Assert.assertEquals(idp.getMember_name().getText(), data.get("mem_first_name")+data.get("mem_last_name"));
     }
 
     @Test(dataProvider = "getData", groups = {"QAR"})

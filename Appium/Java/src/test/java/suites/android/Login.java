@@ -39,7 +39,7 @@ public class Login extends AndroidBase {
         lp.inputTextAndroid(lp.getLogin_password_field(), data.get("password"));
         lp.getLogin_button().click();
         new AppiumUtils(driver).waitElement(hp.getWelcomeMsg());
-        Assert.assertEquals(hp.getWelcomeMsg().getText(), STR."Welcome,\n\{data.get("mem_first_name")} \{data.get("mem_last_name")}", "Data not matching");
+        Assert.assertEquals(hp.getWelcomeMsg().getText(), "Welcome,\n"+data.get("mem_first_name")+ data.get("mem_last_name"), "Data not matching");
 
     }
 

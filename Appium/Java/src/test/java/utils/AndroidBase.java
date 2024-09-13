@@ -32,7 +32,7 @@ public class AndroidBase {
         androidOptions.setAutomationName("UIAutomator2");
         androidOptions.setPlatformName("android");
         androidOptions.setCapability("autoGrantPermissions", true);
-        androidOptions.setApp(STR."\{System.getProperty("user.dir")}//src//test//java//resources//qar//app-debug.apk");
+        androidOptions.setApp(System.getProperty("user.dir")+"//src//test//java//resources//qar//app-debug.apk");
         System.out.println("Installing QAR apk");
         driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), androidOptions);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -44,7 +44,7 @@ public class AndroidBase {
         androidOptions.setAutomationName("UIAutomator2");
         androidOptions.setPlatformName("android");
         androidOptions.setCapability("autoGrantPermissions", true);
-        androidOptions.setApp(STR."\{System.getProperty("user.dir")}//src//test//java//resources//prod//app-debug.apk");
+        androidOptions.setApp(System.getProperty("user.dir")+"//src//test//java//resources//prod//app-debug.apk");
         System.out.println("Installing PROD apk");
         driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), androidOptions);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -62,7 +62,7 @@ public class AndroidBase {
     @DataProvider
     public Object[][] getData() throws IOException {
         AppiumUtils utils = new AppiumUtils(driver);
-        List<HashMap<String, String>> data = utils.getJsonData(STR."\{System.getProperty("user.dir")}//src//test//java//data//sunlifeData.json");
+        List<HashMap<String, String>> data = utils.getJsonData(System.getProperty("user.dir")+"//src//test//java//data//sunlifeData.json");
         return new Object[][]{{data.getFirst()}};
     }
 

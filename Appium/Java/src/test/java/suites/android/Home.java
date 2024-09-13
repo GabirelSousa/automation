@@ -38,7 +38,7 @@ public class Home extends AndroidBase {
     @Severity(SeverityLevel.NORMAL)
     public void homeName(HashMap<String, String> data) throws FileNotFoundException {
         HomePage hp = new HomePage(driver);
-        Assert.assertEquals(hp.getWelcomeMsg().getText(), STR."Welcome,\n\{data.get("mem_first_name")} \{data.get("mem_last_name")}", "Data not matching");
+        Assert.assertEquals(hp.getWelcomeMsg().getText(), "Welcome,\n"+data.get("mem_first_name")+data.get("mem_last_name"), "Data not matching");
 
 
     }

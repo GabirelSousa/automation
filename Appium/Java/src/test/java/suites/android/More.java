@@ -221,7 +221,7 @@ public class More extends AndroidBase {
     @Severity(SeverityLevel.NORMAL)
     public void moreMemberName(HashMap<String, String> data) throws FileNotFoundException {
         MorePage mp = new MorePage(driver);
-        Assert.assertEquals(mp.getMore_screen_member_name().getText(), STR."\{data.get("mem_first_name")} \{data.get("mem_last_name")}");
+        Assert.assertEquals(mp.getMore_screen_member_name().getText(), data.get("mem_first_name")+data.get("mem_last_name"));
 
     }
 

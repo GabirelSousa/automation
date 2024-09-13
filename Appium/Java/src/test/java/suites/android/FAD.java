@@ -61,7 +61,7 @@ public class FAD extends AndroidBase {
         FindDentistPage fdp = new FindDentistPage(driver);
         String prepaid_network = data.get("fad_prepaid_network");
         fdp.swipeUp();
-        boolean networkAvailable = driver.findElement(By.xpath(STR."//XCUIElementTypeStaticText[@name=\{prepaid_network}]")).isDisplayed();
+        boolean networkAvailable = driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name='prepaid_network']")).isDisplayed();
         Assert.assertTrue(networkAvailable);
 
     }
@@ -73,7 +73,7 @@ public class FAD extends AndroidBase {
         FindDentistPage fdp = new FindDentistPage(driver);
         String state_of_residence = data.get("fad_state_of_residence");
         fdp.swipeUp();
-        boolean networkState = driver.findElement(By.xpath(STR."//XCUIElementTypeStaticText[@name=\{state_of_residence}]")).isDisplayed();
+        boolean networkState = driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name='state_of_residence']")).isDisplayed();
         Assert.assertTrue(networkState);
     }
 

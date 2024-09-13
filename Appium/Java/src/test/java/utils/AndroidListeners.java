@@ -12,13 +12,14 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 
+
 public class AndroidListeners extends AndroidBase implements ITestListener {
 
 
     @Override
     public void onTestFailure(ITestResult result) {
         try {
-            Allure.addAttachment(STR."\{result.getMethod().getMethodName()}_ANDROID", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+            Allure.addAttachment("result.getMethod().getMethodName()_ANDROID", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -28,7 +29,7 @@ public class AndroidListeners extends AndroidBase implements ITestListener {
     @Override
     public void onTestSkipped(ITestResult result) {
         try {
-            Allure.addAttachment(STR."\{result.getMethod().getMethodName()}_ANDROID", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+            Allure.addAttachment("result.getMethod().getMethodName()_ANDROID", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -37,7 +38,7 @@ public class AndroidListeners extends AndroidBase implements ITestListener {
     @Override
     public void onFinish(ITestContext context) {
         copyHistory();
-        File location = new File(STR."\{System.getProperty("user.dir")}");
+        File location = new File(System.getProperty("user.dir"));
         try {
             runCommand(location);
         } catch (Exception e) {
@@ -54,10 +55,10 @@ public class AndroidListeners extends AndroidBase implements ITestListener {
     }
 
     private void copyHistory() {
-        String source = STR."\{System.getProperty("user.dir")}//allure-report//history";
+        String source = System.getProperty("user.dir")+"//allure-report//history";
         File srcDir = new File(source);
 
-        String destination = STR."\{System.getProperty("user.dir")}//allure-results//history";
+        String destination = System.getProperty("user.dir")+"//allure-results//history";
         File dstDir = new File(destination);
 
         try {

@@ -19,6 +19,7 @@ import commomUtils.AppiumUtils;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 
+
 public class CreateAccount extends AndroidBase {
 
 
@@ -407,8 +408,8 @@ public class CreateAccount extends AndroidBase {
         cap.getAgreeTermsCheckbox().click();
         String[] symbols = {".", "_", "~", " "};
         for (String symbol : symbols) {
-            cap.inputTextAndroid(cap.getPasswordField(), STR."Shannon\{symbol}Matthews@1234");
-            cap.inputTextAndroid(cap.getConfirmPasswordField(), STR."Shannon\{symbol}Matthews@1234");
+            cap.inputTextAndroid(cap.getPasswordField(), "Shannon"+symbol+"Matthews@1234");
+            cap.inputTextAndroid(cap.getConfirmPasswordField(), "Shannon"+symbol+"Matthews@1234");
             Assert.assertFalse(cap.getCreateAccountButton().isEnabled(), "Create button should be disabled when NOT all required fields conditions are filled");
         }
 
@@ -826,8 +827,8 @@ public class CreateAccount extends AndroidBase {
         cap.getAgreeTermsCheckbox().click();
         String[] symbols = {".", "_", "~", " "};
         for (String symbol : symbols) {
-            cap.inputTextAndroid(cap.getPasswordField(), STR."Shannon\{symbol}Matthews@1234");
-            cap.inputTextAndroid(cap.getConfirmPasswordField(), STR."Shannon\{symbol}Matthews@1234");
+            cap.inputTextAndroid(cap.getPasswordField(), "Shannon"+symbol+"Matthews@1234");
+            cap.inputTextAndroid(cap.getConfirmPasswordField(), "Shannon"+symbol+"Matthews@1234");
             Assert.assertFalse(cap.getCreateAccountButton().isEnabled(), "Create button should be disabled when NOT all required fields conditions are filled");
         }
 

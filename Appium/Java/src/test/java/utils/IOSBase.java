@@ -32,7 +32,7 @@ public class IOSBase {
         iosOptions.setCapability("simpleIsVisibleCheck", true);
         iosOptions.setCapability("autoAcceptAlerts", true);
         iosOptions.setCapability("sendKeyStrategy", "OneByOne");
-        iosOptions.setApp(STR."\{System.getProperty("user.dir")}//src//test//java//resources//qar//SunLifeUS.app");
+        iosOptions.setApp(System.getProperty("user.dir")+"//src//test//java//resources//qar//SunLifeUS.app");
         System.out.println("Installing QAR apk");
         iosOptions.setWdaLaunchTimeout(Duration.ofSeconds(20));
         driver = new IOSDriver(new URI("http://127.0.0.1:4723").toURL(), iosOptions);
@@ -51,7 +51,7 @@ public class IOSBase {
         iosOptions.setCapability("simpleIsVisibleCheck", true);
         iosOptions.setCapability("autoAcceptAlerts", true);
         iosOptions.setCapability("sendKeyStrategy", "OneByOne");
-        iosOptions.setApp(STR."\{System.getProperty("user.dir")}//src//test//java//resources//prod//SunLifeUS.app");
+        iosOptions.setApp(System.getProperty("user.dir")+"//src//test//java//resources//prod//SunLifeUS.app");
         System.out.println("Installing PROD apk");
         iosOptions.setWdaLaunchTimeout(Duration.ofSeconds(20));
         driver = new IOSDriver(new URI("http://127.0.0.99:4723").toURL(), iosOptions);
@@ -68,7 +68,7 @@ public class IOSBase {
     @DataProvider
     public Object[][] getData() throws IOException {
         AppiumUtils utils = new AppiumUtils(driver);
-        List<HashMap<String, String>> data = utils.getJsonData(STR."\{System.getProperty("user.dir")}//src//test//java//data//sunlifeData.json");
+        List<HashMap<String, String>> data = utils.getJsonData(System.getProperty("user.dir")+"//src//test//java//data//sunlifeData.json");
         return new Object[][]{{data.getFirst()}};
     }
 

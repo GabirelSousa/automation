@@ -205,7 +205,7 @@ public class More extends IOSBase {
     @Description("Validate data is matching in more screen - Member name")
     @Severity(SeverityLevel.NORMAL)
     public void moreMemberName(HashMap<String, String> data) throws FileNotFoundException {
-        Assert.assertEquals(driver.findElement(AppiumBy.accessibilityId(STR."\{data.get("mem_first_name")} \{data.get("mem_last_name")}")).getText(), STR."\{data.get("mem_first_name")} \{data.get("mem_last_name")}");
+        Assert.assertEquals(driver.findElement(AppiumBy.accessibilityId(data.get("mem_first_name")+data.get("mem_last_name"))).getText(), data.get("mem_first_name")+data.get("mem_last_name"));
 
     }
 

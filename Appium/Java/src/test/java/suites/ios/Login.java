@@ -38,7 +38,7 @@ public class Login extends IOSBase {
         lp.inputTextReturn(lp.getLogin_email_address_text_box(), data.get("email"));
         lp.inputTextReturn(lp.getLogin_password_text_box(), "password");
         new AppiumUtils(driver).waitElement(hp.getWelcomeMsg());
-        Assert.assertEquals(hp.getWelcomeMsg().getText(), STR."Welcome,\n\{data.get("mem_first_name")} \{data.get("mem_last_name")}", "Data not matching");
+        Assert.assertEquals(hp.getWelcomeMsg().getText(), "Welcome,\n"+data.get("mem_first_name")+data.get("mem_last_name"), "Data not matching");
 
     }
 

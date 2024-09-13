@@ -57,7 +57,7 @@ public class FAD extends IOSBase {
     @Severity(SeverityLevel.NORMAL)
     public void checkPrePaidNetwork(HashMap<String, String> data) {
         String prepaid_network = data.get("fad_prepaid_network");
-        boolean networkAvailable = driver.findElement(By.xpath(STR."//XCUIElementTypeStaticText[@name=\{prepaid_network}]")).isDisplayed();
+        boolean networkAvailable = driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name='prepaid_network'}]")).isDisplayed();
         Assert.assertTrue(networkAvailable);
 
     }
@@ -67,7 +67,7 @@ public class FAD extends IOSBase {
     @Severity(SeverityLevel.NORMAL)
     public void checkPrePaidNetworkState(HashMap<String, String> data) {
         String state_of_residence = data.get("fad_state_of_residence");
-        boolean networkState = driver.findElement(By.xpath(STR."//XCUIElementTypeStaticText[@name=\{state_of_residence}]")).isDisplayed();
+        boolean networkState = driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name='state_of_residence']")).isDisplayed();
         Assert.assertTrue(networkState);
     }
 
