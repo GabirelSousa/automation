@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('getDataTest',(dataTestSelector)=>{
+    return cy.get(`[data-test="${dataTestSelector}"]`)
+})
+
+Cypress.Commands.add('isVisibleText',(dataText)=>{
+    return cy.contains(`${dataText}`).should('be.visible')
+})
+
+Cypress.Commands.add('isNotVisibleText',(dataText)=>{
+    return cy.contains(`${dataText}`).should('not.be.visible')
+})
+
+Cypress.Commands.add('inputText',(dataTest,text)=>{
+    return cy.getDataTest(`${dataTest}`).find('input').type(`${text}`)
+})
