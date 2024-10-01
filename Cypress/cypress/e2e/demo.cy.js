@@ -1,12 +1,17 @@
 /// <reference types = "Cypress"/>
 
+import ExamplePage from "../../pages/ExamplePage"
+
 describe('Cypress E2E testing demo', () => {
   beforeEach(() => {
-    cy.visit('https://practice-automation.com')
+    const examplePage = new ExamplePage()
+    examplePage.openExamplePage()
   })
 
   it('Assert URL', () => {
-    cy.url().should('equal', 'https://practice-automation.com/')
+    const examplePage = new ExamplePage()
+    examplePage.assertUrl()
+    
   })
 
   it('Assert title', () => {
