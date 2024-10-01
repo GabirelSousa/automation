@@ -1,0 +1,9 @@
+{
+    "name":"Gabriel",
+    "email":"gabriel@test.com",
+    "password":"123@123",
+    "drink":"Coffee",
+    "favorite-color":"Yellow",
+    "like-automation":"yes",
+    "message":"this is a message from Gabriel inside fixture"
+}
