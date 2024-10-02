@@ -16,7 +16,7 @@ describe('template spec', () => {
     cy.get('#pum_popup_title_1318').contains('Simple Modal').should('not.be.visible')
   })
 
-  it.only('Test form modal', () => {
+  it('Test form modal', () => {
     cy.fixture('data.json').as('userData')
     cy.get('#formModal').click()
     cy.get('#pum_popup_title_674').should('be.visible')
@@ -37,5 +37,23 @@ describe('template spec', () => {
     })
     cy.get('[class="pum-close popmake-close"]').click({ multiple: true, force: true })
     cy.get('#pum_popup_title_674').should('not.be.visible')
+  })
+
+  it.only('Cleaning field', () => {
+    cy.fixture('data.json').as('userData')
+    cy.get('#formModal').click()
+    cy.get('#pum_popup_title_674').should('be.visible')
+    cy.get('@userData').then((user) => {
+      cy.get('#g1051-name').type(user.name)
+      cy.get('#g1051-email').type(user.email)
+      cy.get('#contact-form-comment-g1051-message').type(user.message)
+    })
+    cy.wait(2000)
+    cy.get('#g1051-name').clear().type('new name')
+    cy.wait(2000)
+    cy.get('#g1051-email').clear().type('new email')
+    cy.wait(2000)
+    cy.get('#contact-form-comment-g1051-message').clear().type('new message')
+    cy.wait(2000)
   })
 })
