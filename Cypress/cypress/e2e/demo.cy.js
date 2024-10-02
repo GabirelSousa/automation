@@ -23,6 +23,7 @@ describe('Cypress E2E testing demo', () => {
     cy.get('a').should('contain.text','JavaScript Delays')
     cy.get('a').should('contain.text','Form Fields')
     cy.get('a').should('contain.text','Popups')
+    cy.get('footer').scrollIntoView().should('contain.text','About')
     cy.log('Aqui termina um log')
   })
 
