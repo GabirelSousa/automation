@@ -4,7 +4,9 @@
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "main": "index.js",
   "scripts": {
+    "dev": "npx cypress open",
     "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "keywords": [],
   "author": "",
@@ -15,7 +17,5 @@
     "prettier": "^3.3.3"
   },
   "devDependencies": {
-    "allure-commandline": "^2.30.0",
-    "allure-cypress": "^3.0.4"
   }
 }
