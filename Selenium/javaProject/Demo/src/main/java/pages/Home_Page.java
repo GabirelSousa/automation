@@ -28,4 +28,12 @@ public class Home_Page {
     public WebElement getLog_in_button() {
         return log_in_button;
     }
+
+    public WebElement getForgot_login_info_link() {
+        return forgot_login_info_link;
+    }
+
+    public WebElement getRegister_link() {
+        return register_link;
+    }
 }
