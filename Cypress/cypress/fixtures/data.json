@@ -1,9 +1,0 @@
-{
-    "name":"Gabriel",
-    "email":"gabriel@test.com",
-    "password":"123@123",
-    "drink":"Coffee",
-    "color":"Yellow",
-    "automation":1,
-    "message":"this is a message from Gabriel inside fixture"
-}
