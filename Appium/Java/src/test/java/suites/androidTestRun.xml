@@ -17,11 +17,7 @@
 
     <test name="QAR - Full test">
         <classes>
-            <class name="suites.android.CreateAccount"/>
+            <class name="suites.android.Login"/>
         </classes>
-        <!-- OR -->
-        <packages>
-            <package name="suites.android"/>
-        </packages>
     </test>
 </suite>

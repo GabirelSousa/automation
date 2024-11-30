@@ -4,29 +4,29 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
 
 public class Common {
 
+    public WebDriver driver;
 
-    public void useFirefox(){
-        String baseUrl = "https://parabank.parasoft.com/";
-        WebDriver driver;
-        System.setProperty("webdriver.chrome.driver","/Users/gasou/Documents/automation/Selenium/javaProject/Demo/src/main/resources/geckodriver.exe");
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(baseUrl);
+    public Common(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void useFirefox(WebDriver driver, String BaseUrl) {
+
 
     }
 
-    public void useChrome(){
-        String baseUrl = "https://parabank.parasoft.com/";
-        WebDriver driver;
-        System.setProperty("webdriver.chrome.driver","/Users/gasou/Documents/automation/Selenium/javaProject/Demo/src/main/resources/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(baseUrl);
+    public void useChrome() {
+
     }
+
+
 }
